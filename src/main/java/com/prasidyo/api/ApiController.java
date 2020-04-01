@@ -20,7 +20,7 @@ public class ApiController {
 		return "home api sukses";
 	}
 
-	@CrossOrigin(origins = "http://localhost")
+	//@CrossOrigin(origins = "http://localhost")
 	@ResponseBody
 	@RequestMapping(value = "/getData", method = RequestMethod.GET)
 	public ResponseEntity<Map<String, Object>> getData() {
