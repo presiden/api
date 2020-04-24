@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class ApiController {
 
-	@CrossOrigin(origins = "http://localhost")
+	//@CrossOrigin(origins = "http://localhost")
 	@ResponseBody
 	@RequestMapping(value = "/", method = RequestMethod.GET)
 	public ResponseEntity<String> index() {
