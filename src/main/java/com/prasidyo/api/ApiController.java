@@ -2,7 +2,6 @@ package com.prasidyo.api;
 
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 import org.springframework.http.HttpStatus;
@@ -17,7 +16,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class ApiController {
 
-	//@CrossOrigin(origins = "http://localhost")
+	@CrossOrigin(origins = "http://localhost")
 	@ResponseBody
 	@RequestMapping(value = "/", method = RequestMethod.GET)
 	public ResponseEntity<String> index() {
@@ -27,7 +26,7 @@ public class ApiController {
 		return new ResponseEntity<String>(isi, HttpStatus.OK);
 	}
 
-	//@CrossOrigin(origins = "http://localhost")
+	@CrossOrigin(origins = "http://localhost")
 	@ResponseBody
 	@RequestMapping(value = "/getData", method = RequestMethod.GET)
 	public ResponseEntity<Map<String, Object>> getData() {
@@ -51,7 +50,7 @@ public class ApiController {
 		return new ResponseEntity<Map<String, Object>>(map, HttpStatus.OK);
 	}
 
-	//@CrossOrigin(origins = "http://localhost")
+	@CrossOrigin(origins = "http://localhost")
 	@ResponseBody
 	@RequestMapping(value = "/postData", method = RequestMethod.POST)
 	public ResponseEntity<Map<String, Object>> getPaymentVoucherDtl(@RequestBody Map<String, Object> input) {
