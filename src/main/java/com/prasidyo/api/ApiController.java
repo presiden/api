@@ -19,6 +19,14 @@ public class ApiController {
 		System.out.print("home console");
 		return "home api sukses";
 	}
+	
+	@ResponseBody
+	@RequestMapping(value = "/", method = RequestMethod.GET)
+	public ResponseEntity<String> getData() {
+		String isi = "Saya adalah makelar kopi, tinggal di Laurier No. 37.";
+		
+		return new ResponseEntity<String>(isi, HttpStatus.OK);
+	}
 
 	//@CrossOrigin(origins = "http://localhost")
 	@ResponseBody
@@ -38,6 +46,11 @@ public class ApiController {
 		detail.put("6", "enam");
 		map.put("B", detail);
 		
+		detail = new HashMap<String, String>();
+		detail.put("7", "tujuh");
+		detail.put("8", "delapan");
+		detail.put("9", "sembilan");
+		map.put("B", detail);
 		
 		return new ResponseEntity<Map<String, Object>>(map, HttpStatus.OK);
 	}
